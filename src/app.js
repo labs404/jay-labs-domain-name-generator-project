@@ -1,8 +1,4 @@
-window.onload = function() {
-  let domain = generateDomainName();
-  let domainElement = document.getElementById("domain");
-  // domainElement.innerHTML = domain; // not necessary when generating new 'p' elements
-};
+/* eslint-disable */
 
 let firstPart = ["richards-", "gilfoyles-", "dineshs-", "jareds-"];
 let secondPart = ["serverdocs.", "cloudstorage.", "app.", "codespace."];
@@ -16,14 +12,18 @@ function generateDomainName() {
         for (let l = 0; l < fourthPart.length; l++) {
           let domainString =
             firstPart[i] + secondPart[j] + thirdPart[k] + fourthPart[l];
-          const para = document.createElement("p");
-          const node = document.createTextNode(domainString);
-          para.appendChild(node);
+          const paragraph = document.createElement("p");
+          const content = document.createTextNode(domainString);
+          paragraph.appendChild(content);
           const element = document.getElementById("div1");
-          element.appendChild(para);
+          element.appendChild(paragraph);
           console.log(domainString);
         }
       }
     }
   }
 }
+
+window.onload = function() {
+  generateDomainName();
+};
