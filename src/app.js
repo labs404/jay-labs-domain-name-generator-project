@@ -12,6 +12,7 @@ function generateDomainName() {
         for (let l = 0; l < fourthPart.length; l++) {
           let domainString =
             firstPart[i] + secondPart[j] + thirdPart[k] + fourthPart[l];
+
           //create an empty html paragraph element.
           const paragraph = document.createElement("p");
 
